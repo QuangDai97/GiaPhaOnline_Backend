@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sg5/RLY20VQh+K9FdsLlDkzkCBnLadJmzV6FQE/M/mk=",
+  "Source": "GiaPhaOnline.Api",
+  "BasePath": "_content/GiaPhaOnline.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
