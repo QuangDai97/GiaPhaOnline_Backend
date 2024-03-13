@@ -4,6 +4,7 @@ using GiaPhaOnline.Domain.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GiaPhaOnline.Domain.Migrations
 {
     [DbContext(typeof(GiaPhaDbContext))]
-    partial class GiaPhaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240312153807_initss")]
+    partial class initss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
