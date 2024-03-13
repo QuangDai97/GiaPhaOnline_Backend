@@ -16,7 +16,8 @@ namespace GiaPhaOnline.Domain.EF
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                //.SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.Development.json")
                 .Build();
 
             var connectionString = configuration.GetConnectionString("GiaPhaDb");
