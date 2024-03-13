@@ -15,16 +15,17 @@ namespace GiaPhaOnline.Domain.EF
     {
         public GiaPhaDbContext(DbContextOptions options) : base(options)
         {
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new DongHoConfiguration());
-            modelBuilder.ApplyConfiguration(new UserInfoConfiguration());
+            modelBuilder.ApplyConfiguration(new FamilyConfiguration());
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
         }
 
 
-        public DbSet<UserInfo> UserInfos { get; set; }
-        public DbSet<DongHo> DongHos { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public DbSet<Family> Families { get; set; }
     }
 }

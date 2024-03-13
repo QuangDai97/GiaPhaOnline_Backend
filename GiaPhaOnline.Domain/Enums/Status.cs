@@ -9,6 +9,6 @@ namespace GiaPhaOnline.Domain.Enums
     public enum Status
     {
         Active,
-        InActicve
+        InActive
     }
 }
