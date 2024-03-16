@@ -1,11 +1,23 @@
+using GiaPhaOnline.Domain.Interfaces;
+using GiaPhaOnline.Infrastructure;
+using GiaPhaOnline.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var config = builder.Configuration;
 
-// Add services to the container.
+services.AddControllers();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddDbContext<GiaPhaOnlineDbContext>(options =>
+{
+    options.UseSqlServer(config.GetConnectionString("GiaPhaOnline"));
+});
+
+// Add DI
+services.AddScoped<IFamilyRepository, FamilyRepository>();
 
 var app = builder.Build();
 

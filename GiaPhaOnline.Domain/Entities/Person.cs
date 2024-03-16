@@ -9,8 +9,7 @@ namespace GiaPhaOnline.Domain.Entities
 {
     public class Person
     {
-        public string Id { get; set; }
-        public string LastName { get; set; }
+        public string Id { get; set; } = Ulid.NewUlid().ToString();
         public string FullName { get; set; }
         public DateTime Dob { get; set; }
         public string Email { get; set; }
@@ -19,10 +18,9 @@ namespace GiaPhaOnline.Domain.Entities
         public string Address { get; set; }
         public string DadId { get; set; }
         public string MotherId { get; }
-        public string VcId { get; }
         public Status Status { get; set; }
-        public string CreateBy { get; set; }
-        public DateTimeOffset CreateDate { get; set; }
-        public Family Families { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
+        public Family Family { get; set; }
     }
 }

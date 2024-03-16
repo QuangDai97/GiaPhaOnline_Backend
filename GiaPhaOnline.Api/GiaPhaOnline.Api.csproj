@@ -23,4 +23,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\GiaPhaOnline.Infrastructure\GiaPhaOnline.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
